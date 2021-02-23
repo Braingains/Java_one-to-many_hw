@@ -14,6 +14,8 @@ public class Folder {
     @Column(name = "title")
     private String title;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private List<File> files;
     private User user;
 
