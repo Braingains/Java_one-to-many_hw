@@ -22,6 +22,10 @@ public class Folder {
         this.user = user;
     }
 
+    public Folder() {}
+
+
+
     public Long getId() {
         return id;
     }
