@@ -23,7 +23,7 @@ public class File {
     private double size;
 
     @ManyToOne
-    @JoinColumn(name = "folder_id", nullable = false)
+    @JoinColumn(name = "folder_id", nullable = false) //where I am, many files have one folder.
     @JsonIgnoreProperties({"files"})
     private Folder folder;
 

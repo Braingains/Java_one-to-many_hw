@@ -20,8 +20,8 @@ public class User {
     private String name;
 
     @JsonIgnoreProperties({"user"})
-    @OneToMany(mappedBy = "user")
-    private List<Folder> folders;
+    @OneToMany(mappedBy = "user") //reference where I currently am, one user has many folders
+    private List<Folder> folders; //what I want to have my OneToMany with
 
     public User(String name) {
         this.name = name;

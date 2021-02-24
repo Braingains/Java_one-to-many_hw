@@ -18,11 +18,11 @@ public class Folder {
     private String title;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false) //many folders have one user
     private User user;
 
     @JsonIgnoreProperties({"folder"})
-    @OneToMany(mappedBy = "folder")
+    @OneToMany(mappedBy = "folder") //reference where I am, one folder has many files
     private List<File> files;
 
     public Folder(String title, User user) {
