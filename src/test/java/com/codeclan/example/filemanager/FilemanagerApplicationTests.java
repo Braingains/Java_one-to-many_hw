@@ -1,5 +1,8 @@
 package com.codeclan.example.filemanager;
 
+import com.codeclan.example.filemanager.models.File;
+import com.codeclan.example.filemanager.models.Folder;
+import com.codeclan.example.filemanager.models.User;
 import com.codeclan.example.filemanager.repositories.FileRepository;
 import com.codeclan.example.filemanager.repositories.FolderRepository;
 import com.codeclan.example.filemanager.repositories.UserRepository;
@@ -26,6 +29,12 @@ class FilemanagerApplicationTests {
 
 	@Test
 	void contextLoads() {
+	}
+
+	@Test
+	public void createUser() {
+		User user = new User("Ewan");
+		userRepository.save(user);
 	}
 
 }
