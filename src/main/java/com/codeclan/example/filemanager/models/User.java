@@ -20,7 +20,7 @@ public class User {
     private String name;
 
     @JsonIgnoreProperties({"user"})
-    @OneToMany(mappedBy = "folder")
+    @OneToMany(mappedBy = "user")
     private List<Folder> folders;
 
     public User(String name) {
